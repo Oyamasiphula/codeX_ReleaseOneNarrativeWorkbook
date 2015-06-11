@@ -56,7 +56,7 @@ var findProductsSold = function(fileName){
                 }
                 //???
 
-                 soldItemsMap[soldItem] = soldItemsMap[soldItem] + parseInt(quantity,10); 
+                  soldItemsMap[soldItem] = soldItemsMap[soldItem] + parseInt(quantity,10); 
 
         });
 
@@ -69,15 +69,6 @@ var findProductsSold = function(fileName){
 module.exports = function(folderName){
     this.productNames = function(cb){
         var files = findProducts(folderName);
-
-        //var prodCountMap = findProductsSold(folderName);
-        //var files = [];
-        /*
-        for(prod in prodCountMap){
-            files.push(prod);
-        }
-        */
-
         cb(null, files);
     };
 
